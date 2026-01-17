@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (botao.classList.contains('igual')) {
         try {
-          // Avalia a expressão matemática da tela
+          
           tela.value = eval(tela.value);
         } catch {
           tela.value = 'Erro';
         }
       } else if (botao.classList.contains('operador')) {
         const ultimo = tela.value.slice(-1);
-        // Evita operadores duplicados no fim
+
         if (!['+', '-', '*', '/'].includes(ultimo) && tela.value !== '') {
           tela.value += valor;
         }
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } else if (valor === '.') {
         const partes = tela.value.split(/[\+\-\*\/]/);
         const ultimoNumero = partes[partes.length - 1];
-        // Evita múltiplos pontos no mesmo número
+        
         if (!ultimoNumero.includes('.')) {
           tela.value += valor;
         }
@@ -34,3 +34,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
