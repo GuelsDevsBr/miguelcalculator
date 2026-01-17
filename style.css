@@ -1,71 +1,84 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #222;
-    font-family: Arial, sans-serif;
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .calculadora {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px black;
+  background: #333;
+  padding: 20px;
+  border-radius: 12px;
+  width: 320px;
+  box-shadow: 0 0 15px #000000aa;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .tela {
-    width: 100%;
-    height: 50px;
-    font-size: 2rem;
-    text-align: right;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
+  height: 60px;
+  font-size: 2rem;
+  text-align: right;
+  padding: 0 15px;
+  border-radius: 8px;
+  border: none;
+  background: #111;
+  color: #eee;
+  user-select: none;
 }
 
 .botoes {
-    display: grid;
-    grid-template-columns: repeat(4, 60px);
-    gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
 }
 
 .btn {
-    padding: 20px;
-    font-size: 1.5rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #555;
-    color: white;
-    transition: 0.2s;
+  padding: 18px 0;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #555;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  user-select: none;
 }
 
 .btn:hover {
-    background-color: #777;
+  background-color: #777;
 }
 
 .operador {
-    background-color: #f57c00;
+  background-color: #f57c00;
 }
 
 .operador:hover {
-    background-color: #ff9800;
+  background-color: #ff9800;
 }
 
 .igual {
-    background-color: #4caf50;
+  background-color: #4caf50;
 }
 
 .igual:hover {
-    background-color: #66bb6a;
+  background-color: #66bb6a;
 }
 
 .limpar {
-    background-color: #e53935;
+  background-color: #d32f2f;
+  grid-column: span 4;
 }
 
 .limpar:hover {
-    background-color: #ef5350;
+  background-color: #f44336;
 }
